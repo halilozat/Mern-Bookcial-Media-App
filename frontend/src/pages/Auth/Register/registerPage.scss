@@ -1,0 +1,137 @@
+*{
+  padding: 0;
+  margin: 0;
+
+}
+body{
+  background-image: url("../../../assets/images/backgroundImage.jpg");
+}
+
+.container{
+  position: relative;
+  margin: 6% auto;
+  padding: 30px;
+
+  background:#21395f;
+  height: 480px;
+  width: 380px;
+
+
+
+  .formElements{
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    margin: 30px auto;
+
+    span{
+      color: white;
+    }
+
+    .password{
+      margin: 15px 0;
+      width: 280px;
+      padding: 15px;
+      background-color: #2c4975;
+      outline: none;
+      border-color: #0f355f;
+      border-style: solid;
+      border-width: thin;
+      box-shadow:inset 0 0 5px 5px #213b65;
+      color:white;
+    }
+    .passwordConfirm{
+      margin-bottom: 10px ;
+      width: 280px;
+      padding: 15px;
+      background-color: #2c4975;
+      outline: none;
+      border-color: #0f355f;
+      border-style: solid;
+      border-width: thin;
+      box-shadow:inset 0 0 5px 5px #213b65;
+      color:white;
+    }
+    .userName {
+
+      width: 280px;
+      padding: 15px;
+      background-color: #2c4975;
+      color: white;
+      outline: none;
+      border-color: #0f355f;
+      border-style: solid;
+      border-width: thin;
+      box-shadow: inset 0 0 5px 5px #213b65;
+    }
+      .email{
+      margin-top: 15px;
+      width: 280px;
+      padding: 15px;
+      background-color: #2c4975;
+      color: white;
+      outline: none;
+      border-color: #0f355f;
+      border-style: solid;
+      border-width: thin;
+      box-shadow:inset 0 0 5px 5px #213b65;
+
+      .userIcon{
+        position: relative;
+        margin-top: 100px;
+      }
+      .lockIcon{
+        position: relative;
+        margin-top: 100px;
+      }
+    }
+
+    ::placeholder{
+      color: white;
+      font-size: medium;
+
+    }
+    .button{
+      padding: 10px 29px;
+      margin-right: 200px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 25px;
+      background-color: #4470b1;
+      color: #ffffff;
+      font-size: large;
+      cursor: pointer;
+    }
+
+  }
+
+  .button:hover{
+    background-color: rgba(68, 112, 177, 0.44);
+  }
+  .email:focus{
+    background-color: rgba(110, 146, 189, 0.44);
+  }
+  .password:focus{
+    background-color: rgba(110, 146, 189, 0.44);
+  }
+  .passwordConfirm:focus{
+    background-color: rgba(110, 146, 189, 0.44);
+  }
+  .userName:focus{
+    background-color: rgba(110, 146, 189, 0.44);
+  }
+  .header{
+    text-align: center;
+    margin-top: 60px;
+
+    h1{
+
+      color: white;
+      text-align: center;
+      font-size: xx-large;
+      font-weight: lighter;
+
+    }
+  }
+
+}
