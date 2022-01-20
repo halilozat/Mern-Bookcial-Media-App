@@ -1,7 +1,7 @@
 import React from 'react';
 import "./registerPage.scss";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faLockOpen, faUser} from "@fortawesome/free-solid-svg-icons";
+import {faLockOpen, faUser,faEnvelope} from "@fortawesome/free-solid-svg-icons";
 
 const RegisterPage = () => {
     return (
@@ -16,7 +16,7 @@ const RegisterPage = () => {
                     <span> <FontAwesomeIcon icon={faUser} className={"userIcon"} /></span>
 
                     <input type="text" className={"email"}  name="email" placeholder="E-mail"/>
-                    <span> <FontAwesomeIcon icon={faUser} className={"userIcon"} /></span>
+                    <span> <FontAwesomeIcon icon={faEnvelope} className={"userIcon"} /></span>
 
                     <input type="password" className={"password"}  name="password" placeholder="Password"/>
                     <span> <FontAwesomeIcon icon={faLockOpen} className={"lockIcon"} /></span>
