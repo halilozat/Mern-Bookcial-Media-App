@@ -24,6 +24,15 @@ body{
     text-align: center;
     margin: 30px auto;
 
+    .alert {
+      margin-left: 200px;
+      padding: 5px;
+      background-color:  #ff9800;
+      color: white;
+      position: absolute;
+    }
+
+
     span{
       color: white;
     }
