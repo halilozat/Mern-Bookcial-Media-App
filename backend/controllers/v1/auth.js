@@ -5,18 +5,38 @@ const CryptoJS = require("crypto-js");
 
 //register
 const register = async (req, res) => {
+
+  const {
+    UserName,
+    Email,
+    Password,
+    ConfirmPassword,
+  } = req.body;
+
+  const findUser = User.findOne({UserName})
+
+  if (!findUser) {
+    throw new Error('BadRequest')
+  }
+  if (Password !== ConfirmPassword) {
+    throw new Error('Founded')
+  }
+
+  const hashedPassword = CryptoJS.AES.encrypt(Password, process.env.SECRET_KEY).toString()
+
   const newUser = new User({
-    username: req.body.username,
-    email: req.body.email,
-    password: CryptoJS.AES.encrypt(
-      req.body.password,
-      process.env.SECRET_KEY
-    ).toString(),
+    username: UserName,
+    email: Email,
+    password: hashedPassword
   });
+
   try {
     const user = await newUser.save();
     res.status(201).json(user);
   } catch (err) {
+    if (['Founded','BadRequest'].includes(err.message)){
+      res.status(400).json(err.message);
+    }
     res.status(500).json(err);
   }
 };

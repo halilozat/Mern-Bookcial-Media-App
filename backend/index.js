@@ -13,7 +13,7 @@ const apiRouter = require('./routes/index')
 const cors = require('cors');
 
 app.use(cors({
-    origin: 'https://localhost:3000'
+    origin: '*'
 }));
 
 dotenv.config()
