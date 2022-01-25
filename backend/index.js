@@ -1,3 +1,4 @@
+/** Dependencies */
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -9,6 +10,11 @@ const path = require("path")
 
 const apiRouter = require('./routes/index')
 
+const cors = require('cors');
+
+app.use(cors({
+    origin: 'https://localhost:3000'
+}));
 
 dotenv.config()
 
