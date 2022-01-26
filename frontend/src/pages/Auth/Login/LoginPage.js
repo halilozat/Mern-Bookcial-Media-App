@@ -5,7 +5,7 @@ import {faUser} from '@fortawesome/free-solid-svg-icons';
 import {faLockOpen} from "@fortawesome/free-solid-svg-icons";
 import {useForm} from "react-hook-form";
 import {yupResolver} from '@hookform/resolvers/yup';
-import * as yup from 'yup';
+import schema from "./validations";
 
 const LoginPage = () => {
 
@@ -14,10 +14,7 @@ const LoginPage = () => {
         console.log(data);
     };
 
-    const schema = yup.object().shape({
-        email: yup.string().required().email("Geçerli bir e-mail girin"),
-        password: yup.string().required("Bu alan gerekli").min(5, "Şifre minimum 5 karakter olmalıdır"),
-    }).required();
+
 
     const {register, handleSubmit, formState: {errors}} = useForm({
         resolver: yupResolver(schema),

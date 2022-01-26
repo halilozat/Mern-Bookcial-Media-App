@@ -3,26 +3,15 @@ import "./registerPage.scss";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLockOpen, faUser, faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {useForm} from "react-hook-form";
-import * as yup from "yup";
 import {yupResolver} from "@hookform/resolvers/yup";
 import BookcialMediaServices from "../../../services/Services"
-
+import schema  from "./validations";
 
 const RegisterPage = () => {
-
-    const schema = yup.object().shape({
-        email: yup.string().required().email("Geçerli bir e-mail girin"),
-        password: yup.string().required("Bu alan gerekli").min(5, "Şifre minimum 5 karakter olmalıdır"),
-        username: yup.string().required("User name alanı gerekli").min(3, "User name minimum 3 karakter olmalıdır"),
-        passwordConfirm: yup.string().oneOf([yup.ref("password"), null], "Şifreler aynı değil"),
-
-    }).required();
 
     const {register, handleSubmit, formState: {errors}} = useForm({
         resolver: yupResolver(schema),
     });
-
-
 
     const onSubmit = async (data) => {
         try {
