@@ -6,14 +6,15 @@ import {
     Route
 } from "react-router-dom";
 import RegisterPage from "./pages/Auth/Register/RegisterPage";
-
+import Sidebar from "./layout/Sidebar";
+import Header from "./components/MenuComponent/header/Header"
 
 function App() {
   return (
 
       <BrowserRouter>
           <Routes>
-              <Route path="/" element={<RegisterPage />}/>
+              <Route path="/" element={<Header />}/>
           </Routes>
       </BrowserRouter>
 
