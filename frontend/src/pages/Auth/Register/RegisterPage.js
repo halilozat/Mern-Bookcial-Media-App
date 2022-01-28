@@ -33,6 +33,7 @@ const RegisterPage = () => {
     };
 
     return (
+        <div className={"backgroundImage"}>
         <div className={"container"}>
 
             <div className={"header"}>
@@ -95,6 +96,7 @@ const RegisterPage = () => {
                 </form>
             </div>
 
+        </div>
         </div>
     );
 };

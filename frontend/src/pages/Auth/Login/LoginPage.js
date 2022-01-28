@@ -21,6 +21,7 @@ const LoginPage = () => {
     });
 
     return (
+        <div className={"backgroundImage"}>
         <div className={"container"}>
             <div className={"tumElemanlar"}>
                 <div className={"header"}>
@@ -55,6 +56,7 @@ const LoginPage = () => {
                     </form>
                 </div>
             </div>
+        </div>
         </div>
     );
 };
