@@ -1,0 +1,35 @@
+.sidebar{
+
+  background-color: yellow;
+  max-width: 250px;
+  min-width: 100px;
+  height: 100vh;
+
+.buttons{
+  margin-top: 250px;
+}
+  button{
+    margin: auto;
+   width: 14rem;
+    height: 2.5rem;
+    border-radius: 55px;
+   display: block;
+    background-color: white;
+    font-size: medium;
+
+
+
+  }
+  .btnDiziEkle{
+    margin-top:3px;
+    margin-bottom:3px;
+  }
+
+  .sideLinks{
+    margin:150px 14px;
+    display: block;
+    font-size: larger;
+
+  }
+
+}
